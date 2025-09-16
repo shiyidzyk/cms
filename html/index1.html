@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐！</title>
+    <link rel="stylesheet" href="../css/index1.css">
+</head>
+<body>
+    <button id="musicBtn" class="music-btn">点击暂停音乐</button>
+    <div class="bless-container">
+        <div class="bless-title">老班，生日快乐！</div>
+        <div class="bless-text" id="typewriter"></div>
+        <div class="heart">🎂</div>
+        <div class="music-tip"></div>
+        <audio id="birthdayMusic" src="../music/birthday.mp3" autoplay style="display:none;"></audio>
+    </div>
+    <div id="cake-question" class="cake-question-card" style="display:none;text-align:center;margin-top:40px;">
+        <h2 style="color:#e75480;font-size:2rem;margin-bottom:24px;">你今天开心吗？</h2>
+        <div class="cake-btn-group">
+            <button id="btn-happy" class="cake-btn cake-btn-happy">开心</button>
+            <button id="btn-unhappy" class="cake-btn cake-btn-unhappy">不开心</button>
+        </div>
+    </div>
+    <script src="../js/index1.js"></script>
+    <script>
+        // 蛋糕动画入场后显示问题和按钮
+        function showCakeQuestion() {
+            var card = document.getElementById('cake-question');
+            card.style.display = 'block';
+            card.classList.add('card-animate');
+            document.getElementById('btn-happy').onclick = function() {
+                window.location.href = 'index2.html';
+            };
+            document.getElementById('btn-unhappy').onclick = function() {
+                window.location.href = 'https://www.wjx.cn/vm/PEFZzqM.aspx';
+            };
+        }
+        // 监听蛋糕动画入场
+        const cakeEmoji = document.querySelector('.heart');
+        cakeEmoji.addEventListener('animationend', showCakeQuestion);
+    </script>
+</body>
+</html>

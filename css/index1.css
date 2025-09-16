@@ -1,0 +1,138 @@
+body {
+    background: linear-gradient(135deg, #ffe4ec 0%, #ffb6d5 100%);
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+.bless-container {
+    background: #fff0f6;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(255, 182, 213, 0.3);
+    padding: 40px 32px 32px 32px;
+    width: 340px;
+    text-align: center;
+    margin: 80px auto 0 auto;
+}
+.bless-title {
+    font-size: 2rem;
+    color: #e75480;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #ffb6d5;
+    animation: fadeIn 2s;
+}
+.bless-text {
+    font-size: 1.2rem;
+    color: #b85c8a;
+    margin-top: 18px;
+    word-break: break-all;
+    white-space: pre-line;
+    min-height: 3.5em;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.heart {
+    font-size: 5rem;
+    display: inline-block;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: none;
+}
+.heart.enter {
+    animation: cakeUp 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes cakeUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.music-tip {
+    color: #b85c8a;
+    font-size: 1rem;
+    margin-top: 16px;
+}
+.music-btn {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    z-index: 100;
+    background: linear-gradient(90deg, #ffb6d5 0%, #e75480 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 22px;
+    box-shadow: 0 2px 8px rgba(231, 84, 128, 0.15);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.music-btn:hover {
+    background: linear-gradient(90deg, #e75480 0%, #ffb6d5 100%);
+}
+.cake-question-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(255,182,213,0.18);
+    padding: 32px 32px 24px 32px;
+    max-width: 340px;
+    width: 340px;
+    margin: 40px auto 0 auto;
+    display: none;
+    opacity: 0;
+    transform: translateY(60px) scale(0.96);
+}
+.cake-question-card.card-animate {
+    animation: cardIn 1.2s cubic-bezier(.42,1.5,.58,1) forwards;
+    animation-delay: 0.2s;
+}
+@keyframes cardIn {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.96);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.04);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.cake-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.cake-btn {
+    border: 2px solid #ffb6d5;
+    background: #fff;
+    color: #e75480;
+    border-radius: 12px;
+    padding: 12px 32px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(231,84,128,0.10);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.cake-btn-happy {
+    border-color: #b85c8a;
+}
+.cake-btn-unhappy {
+    border-color: #ffb6d5;
+}
+.cake-btn:hover {
+    background: #ffb6d5;
+    color: #fff;
+    border-color: #e75480;
+}
