@@ -19,7 +19,7 @@ function login() {
         return;
     }
     // 密码错误
-    if (password !== '0917') {
+    if (password !== '0927') {
         if (notifyAllowed) {
             showNotify('密码错误！密码是你生日哦！（四位数）\n用户名是你的名字哦！，密码是你生日哦！（四位数）');
         } else {
@@ -54,3 +54,4 @@ function showNotify(msg) {
         alert('用户名是你的名字，密码是你的生日哦!（密码为4位数）');
     }
 }
+
